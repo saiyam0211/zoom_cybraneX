@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
+import { AnimatePresence } from 'framer-motion';
 
 import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -40,8 +41,10 @@ export default function RootLayout({
       >
         <body className={`${inter.className} bg-dark-2`}>
           <Toaster />
+          <AnimatePresence mode="wait">
           {children}
-        </body>
+          </AnimatePresence>
+                  </body>
       </ClerkProvider>
     </html>
   );
