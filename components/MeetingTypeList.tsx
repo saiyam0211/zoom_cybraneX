@@ -1,6 +1,5 @@
 'use client';
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
@@ -74,15 +73,15 @@ const MeetingTypeList = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.4
-      }
+        duration: 0.4,
+      },
     },
     hover: {
       scale: 1.05,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
   if (!client || !user) return <Loader />;
@@ -100,9 +99,9 @@ const MeetingTypeList = () => {
       variants={{
         visible: {
           transition: {
-            staggerChildren: 0.1
-          }
-        }
+            staggerChildren: 0.1,
+          },
+        },
       }}
     >
       <MotionDiv variants={cardVariants} whileHover="hover">

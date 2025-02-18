@@ -9,6 +9,7 @@ const config = {
     './src/**/*.{ts,tsx}',
   ],
   prefix: '',
+  safelist: ['destructive'],
   theme: {
     container: {
       center: true,
